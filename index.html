@@ -3,20 +3,20 @@
 
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="./static/css/main.css">
   <title>Kungo Blog</title>
 </head>
 
 <body>
-  <header>
-    <nav>
-      <div class="logo">
-        Kungo
+  <header class="l-header">
+    <nav class="l-nav">
+      <div class="brand">
+        <a href="/">Kungo</a>
       </div>
 
-      <ul>
+      <ul class="nav-link-list">
         <li><a href="#">Articles</a></li>
         <li><a href="#">Learn</a></li>
         <li><a href="#">Timeline</a></li>
@@ -27,9 +27,9 @@
   </header>
 
 
-  <main>
+  <main class="l-main">
     <div class="about">
-      <h1>About</h1>
+      <h2>About</h2>
       <p>I used to be a Milliampere man with five years of experience. But I don't like that job. I want to try
         another type of work. My goal is becoming a full-stack developer. I start this blog for recording resources in
         my learning process. I hope here is a beautiful corner of the web. No ads, No sponsored posts, No newsletter
@@ -39,7 +39,7 @@
     <section>
       <h2>Last Articles</h2>
       <div class="post-on-index">
-        <h3 class="post-on-index__header">Getting Started with Vue - An Overview and Walk through Tutorial</h3>
+        <h4 class="post-on-index__header">Getting Started with Vue - An Overview and Walk through Tutorial</h4>
         <div class="post-on-index__state">
           <ul>
             <li>type-icon</li>
@@ -67,12 +67,51 @@
           </div>
           <div class="post-on-index__digest">
             《你不是记性差，只是没找对方法》(By 池田义博) 读书笔记
-            脑科学研究发现，在人的大脑中，控制记忆的部分被称为“海马体”，记忆的持久性主要由其决定。海马体犹如以为裁决信息是否具有价值的法官，或是提示“这则重要信息需要保存下来”，或是“这条信息完全没有留下的必要”。.
+            脑科学研究发现，在人的大脑中，控制记忆的部分被称为“海马体”，记忆的持久性主要由其决定。海马体犹如以为裁决信息是否具有价值的法官，或是提示“这则重要信息需要保存下来”，或是“这条信息完全没有留下的必要”
+          </div>
+          <a href="#">阅读全文</a>
+        </div>
+
+      <div class="post-on-index">
+        <h4 class="post-on-index__header">Getting Started with Vue - An Overview and Walk through Tutorial</h4>
+        <div class="post-on-index__state">
+          <ul>
+            <li>type-icon</li>
+            <li>date</li>
+            <li>comment-n</li>
+            <li>like-n</li>
+          </ul>
+        </div>
+        <div class="post-on-index__digest">
+          At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti
+          atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident et accusamus
+          iusto odio dignissimos et dolorum fuga.
+        </div>
+        <a href="#">Read More</a>
+
+        <div class="post-on-index">
+          <h3 class="post-on-index__header">记忆也要讲究方法</h3>
+          <div class="post-on-index__state">
+            <ul>
+              <li>type-icon</li>
+              <li>date</li>
+              <li>comment-n</li>
+              <li>like-n</li>
+            </ul>
+          </div>
+          <div class="post-on-index__digest">
+            《你不是记性差，只是没找对方法》(By 池田义博) 读书笔记
+            脑科学研究发现，在人的大脑中，控制记忆的部分被称为“海马体”，记忆的持久性主要由其决定。海马体犹如以为裁决信息是否具有价值的法官，或是提示“这则重要信息需要保存下来”，或是“这条信息完全没有留下的必要”
           </div>
           <a href="#">阅读全文</a>
         </div>
     </section>
   </main>
+
+
+  <footer>
+    © 2019 Copyright: kungo.com
+  </footer>
 </body>
 
 </html>
