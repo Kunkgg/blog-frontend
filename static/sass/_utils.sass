@@ -1,3 +1,6 @@
+/* Media query
+   ========================================================================== */
+
 // Media query for mobile first layout 
 @mixin small-breakpoint
   @media (min-width: #{$mobile})
@@ -12,3 +15,14 @@
 @mixin large-breakpoint
   @media (min-width: #{$desktop})
     @content
+
+
+/* font-size px to rem
+   ========================================================================== */
+
+@function calculateRem($size)
+  $remSize: $size / 16px
+  @return #{$remSize}rem
+
+@mixin font-size-rem($size)
+  font-size: calculateRem($size)
