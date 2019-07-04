@@ -49,6 +49,11 @@ ul li ul
 ol li ol
   margin-bottom: 0
 
+// remove first level list left padding
+ul,
+ol
+  padding-left: 1rem
+
 // Headings
 h1,
 h2,
@@ -62,13 +67,17 @@ h5
   color: $heading-font-color
 
   &:not(:first-child)
-    margin: 1.5rem 0
+    margin: 1em 0
 
 // Increased margin on additional headings
-h1:not(:first-child),
-h2:not(:first-child),
+h1:not(:first-child)
+  margin-top: 10em
+
+h2:not(:first-child)
+  margin-top: 5em
+
 h3:not(:first-child)
-  margin-top: 2rem
+  margin-top: 2.5em
 
 // Heading individual styles
 h1
@@ -76,15 +85,18 @@ h1
 
 h2
   font-size: $h2-mobile
+  @include block-underline
 
 h3
   font-size: $h3-mobile
 
 h4
   font-size: $h4-mobile
+  text-align: center
 
 h5
   font-size: $h5-mobile
+  text-align: right
 
 @include small-breakpoint
   // Increased margin on additional headings
@@ -126,17 +138,25 @@ mark
   padding: 0 0.2rem
 
 // Blockquote
+
 blockquote
+  border-left: 4px solid $grey-darken-1
+  padding: 0.8rem 1rem
   margin: 0 0 $margins 0
-  border-left: $bq-border
-  padding: 0 1.5rem
-  font-size: 1.5rem
+  background-color: $grey-lighten-4
+  border-radius: 5px
 
   cite
     display: block
-    margin-top: $margins
-    font-size: 1rem
-    text-align: right
+    margin-top: 0.75rem
+    margin-bottom: 0
+    margin-block-start: 0.75rem
+    margin-block-end: 0rem
+    line-height: 1.75
+
+  cite::before
+    content: '——'
+
 
 // Code block styling
 pre
@@ -171,12 +191,11 @@ kbd
 
 // Inline code styling
 :not(pre)>code
-  color: $code-color
-  background: $code-background
+  color: $inline-code-color
+  background: #fff8e1
   font-family: $code-family
   font-size: $code-size
   padding: 0 0.2rem
-  border: $borders
   border-radius: $border-radius
 
 // Line break
@@ -191,3 +210,11 @@ dt
 
 dd
   margin-bottom: .5rem
+
+// text Emphasis
+s
+  color: $grey-base
+  text-decoration-color: $accent-color
+
+strong
+  color: $accent-color

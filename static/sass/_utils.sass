@@ -20,9 +20,15 @@
 /* font-size px to rem
    ========================================================================== */
 
-@function calculateRem($size)
-  $remSize: $size / 16px
-  @return #{$remSize}rem
+@function cal-rem($size-px)
+  @return $size-px / 16px * 1rem
 
 @mixin font-size-rem($size)
-  font-size: calculateRem($size)
+  font-size: cal-rem($size)
+
+
+/* text decorator
+   ========================================================================== */
+
+@mixin block-underline
+  border-bottom: 2px solid #ebebeb
