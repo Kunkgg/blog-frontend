@@ -686,6 +686,20 @@ ul.inline-block-list > li ul li {
 
 /* Blog post
  * ========================================================================== */
+.footnotes-sep {
+  max-width: 30%;
+  margin-top: 5rem;
+  margin-left: 0;
+}
+
+.footnotes {
+  margin-bottom: 5rem;
+}
+
+.footnote-item {
+  line-height: 1;
+}
+
 .brand {
   align-items: center;
   font-size: 1.5em;
