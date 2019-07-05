@@ -1,0 +1,51 @@
+/* custom div
+   ========================================================================== */
+
+/**
+ * define 3 kinds of custom div, they are warning, important and tip.
+ */
+
+$custom-div-color-warn: #ffbb33
+$custom-div-color-imp: #ff4444
+$custom-div-color-tip: #00C851
+
+
+div.warning,
+div.important,
+div.tip
+  padding: 0.8em 1em
+  line-height: 1.75
+  border-radius: 5px
+  margin-bottom: 2em
+
+  p:first-child
+    font-weight: 600
+    font-size: 1rem
+    margin-bottom: .5em
+
+div.warning
+    border-left: 4px solid $custom-div-color-warn
+    background-color: rgba($custom-div-color-warn, .05)
+
+div.important
+    border-left: 4px solid $custom-div-color-imp
+    background-color: rgba($custom-div-color-imp, .05)
+
+div.tip
+    border-left: 4px solid $custom-div-color-tip
+    background-color: rgba($custom-div-color-tip, .05)
+
+div.warning 
+  p:first-child,
+  p:first-child i
+    color: $custom-div-color-warn
+
+div.important
+  p:first-child,
+  p:first-child i
+    color: $custom-div-color-imp
+
+div.tip
+  p:first-child,
+  p:first-child i
+    color: $custom-div-color-tip
