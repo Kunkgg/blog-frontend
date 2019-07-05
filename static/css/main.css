@@ -690,6 +690,9 @@ ul.inline-block-list > li ul li {
 
 /* Blog post
  * ========================================================================== */
+/**
+ * * footnotes
+ * */
 .footnotes-sep {
   max-width: 30%;
   margin-top: 5rem;
@@ -702,6 +705,72 @@ ul.inline-block-list > li ul li {
 
 .footnote-item {
   line-height: 1;
+}
+
+/**
+ * * TOC
+ * */
+main .post-toc {
+  border: 1px solid #dedede;
+  border-radius: 4px;
+}
+main .post-toc__header {
+  font-size: 1rem;
+  padding: 0;
+  height: 2em;
+  text-align: center;
+  background: #757575;
+  color: #fafafa;
+  margin-bottom: 1.5em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+main .post-toc__body .toc li {
+  font-size: 0.8rem;
+  line-height: 1.25;
+  margin-bottom: 0.5em;
+  list-style: none;
+}
+main .post-toc__body .toc .is-looking {
+  border-left: #0e51ec 2px solid;
+}
+main .post-toc__body .toc .is-looking a {
+  color: #0e51ec;
+  font-weight: 600;
+}
+main .post-toc__body .toc .toc-H1 {
+  font-size: 1rem;
+  margin-bottom: 1em;
+}
+main .post-toc__body .toc .toc-H1:not(:first-child) {
+  margin-top: 2em;
+}
+main .post-toc__body .toc .toc-H2 {
+  padding-left: 0;
+}
+main .post-toc__body .toc .toc-H3 {
+  padding-left: 0.5rem;
+}
+main .post-toc__body .toc .toc-H4 {
+  padding-left: 1rem;
+}
+main .post-toc__body .toc .toc-H5 {
+  padding-left: 1.5rem;
+}
+main .post-toc__body .toc .toc-H6 {
+  padding-left: 2rem;
+}
+main .post-toc__body .toc a {
+  color: #9e9e9e;
+  font-weight: normal;
+  border-bottom: initial;
+}
+main .post-toc__body .toc a:hover, main .post-toc__body .toc a:active, main .post-toc__body .toc a:focus {
+  border-bottom: initial;
+  background-color: initial;
+  color: #0e51ec;
+  text-decoration: underline;
 }
 
 .brand {

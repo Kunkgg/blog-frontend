@@ -69,9 +69,9 @@ function autoTocScroll() {
     var index = findLooking();
     for (let index = 0; index < tocLis.length; index++) {
         const tocLi = tocLis[index];
-        tocLi.classList.remove('looking');
+        tocLi.classList.remove('is-looking');
     }
-    tocLis[index].classList.add('looking');
+    tocLis[index].classList.add('is-looking');
 }
 
 window.onscroll = function () {

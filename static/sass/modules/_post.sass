@@ -5,6 +5,9 @@
 
 // .post-on-detail
 
+/**
+ * footnotes
+ */
 
 .footnotes-sep
   max-width: 30%
@@ -16,3 +19,73 @@
 
 .footnote-item
   line-height: 1
+
+
+/**
+ * TOC
+ */
+
+main .post-toc
+  border: $borders
+  border-radius: $border-radius
+
+  &__header
+    font-size: 1rem
+    padding: 0
+    height: 2em
+    text-align: center
+    background: $grey-darken-1
+    color: $grey-lighten-5
+    margin-bottom: 1.5em
+    display: flex
+    align-items: center
+    justify-content: center
+  
+  &__body
+    .toc
+      li
+        font-size: .8rem
+        line-height: 1.25
+        margin-bottom: 0.5em 
+        list-style: none
+
+      .is-looking
+        border-left: $link-hover-color 2px solid
+        a
+          color: $link-hover-color
+          font-weight: 600
+
+      .toc-H1
+        font-size: 1rem
+        margin-bottom: 1em
+
+      .toc-H1:not(:first-child)
+        margin-top: 2em
+
+      .toc-H2
+        padding-left:0 
+
+      .toc-H3
+        padding-left: .5rem 
+
+      .toc-H4
+        padding-left: 1rem 
+
+      .toc-H5
+        padding-left: 1.5rem
+
+      .toc-H6
+        padding-left: 2rem
+
+      a
+        color: $grey-base
+        font-weight: normal
+        border-bottom: initial
+
+        &:hover,
+        &:active,
+        &:focus
+          border-bottom: initial
+          background-color: initial
+          color: $link-hover-color
+          text-decoration: underline
