@@ -18,6 +18,8 @@
  * ========================================================================== */
 /* text decorator
  * ========================================================================== */
+/* box-shadow
+ * ========================================================================== */
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
 /* Document
    ========================================================================== */
@@ -590,8 +592,12 @@ dt {
   font-weight: 600;
 }
 
+dt:not(:first-child) {
+  margin-top: 1.2em;
+}
+
 dd {
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.5em;
 }
 
 s {
@@ -608,11 +614,13 @@ table {
   display: block;
   overflow: auto;
   width: 100%;
+  border-radius: 4px;
 }
 table td,
 table th {
   border: 1px solid #dedede;
   padding: 0.5em 0.8em;
+  border-radius: 4px;
 }
 table th {
   color: #ababab;
@@ -622,6 +630,23 @@ table tr {
 }
 table tr:nth-child(2n) {
   background-color: #f8f8f8;
+}
+
+main img {
+  width: 100%;
+  height: 100%;
+  margin: 0 auto 1em auto;
+  max-width: 90%;
+  border-radius: 4px;
+  display: block;
+  margin-left: auto;
+  -webkit-box-shadow: 0px 5px 8px 3px rgba(0, 0, 0, 0.25);
+  box-shadow: 0px 5px 8px 3px rgba(0, 0, 0, 0.25);
+}
+
+abbr[title] {
+  text-decoration-style: solid;
+  padding: 1px 2px;
 }
 
 /* Index-page layout

@@ -225,8 +225,11 @@ hr
 dt
   font-weight: 600
 
+dt:not(:first-child)
+  margin-top: 1.2em
+
 dd
-  margin-bottom: .5rem
+  margin-bottom: .5em
 
 // text Emphasis
 s
@@ -242,11 +245,13 @@ table
   display: block
   overflow: auto
   width: 100%
+  border-radius: $border-radius
 
   td,
   th
     border: 1px solid $border-color
     padding: .5em .8em
+    border-radius: $border-radius
 
   th 
     color: $table-caption
@@ -256,3 +261,21 @@ table
 
   tr:nth-child(2n)
     background-color: $table-stripes
+
+
+// image
+main img
+  width: 100%
+  height: 100%
+  margin: 0 auto $margins auto
+  max-width: 90%
+  border-radius: $border-radius
+  display: block
+  margin-left: auto
+  @include make-box-shadow
+  // box-shadow: inset 0px 0px 0px 400px white
+
+// abbr
+abbr[title]
+  text-decoration-style: solid
+  padding: 1px 2px
