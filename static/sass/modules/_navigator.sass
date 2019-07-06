@@ -21,19 +21,16 @@
   // make grey style link
   @include make-color-link($grey-base, $grey-darken-4)
 
-.link--white
-  @include make-color-link($white-base, $white-base)
+.link--night
+  @include make-color-link($night-color, $white-base)
 
 
 .is-dis-none
   display: none
 
 .is-night
-  background: $grey-darken-4
-  color: white
-
-
-
+  background: $night-background
+  color: $night-color
 
 // theme-icon
 .icon,
@@ -53,18 +50,19 @@
 
 // mobile dropdown menu
 .mobile-dropdown
-  background: $grey-darken-4
+  background: $night-background
   width: 100%
   position: absolute
-  top: 0
+  top: 4rem
   left: 0
   transition: .5s
+  padding-bottom: .5em
 
   &__li
     @extend .li--nostyle
-    padding: .5em .5em
+    padding: .5em 2rem
   
   &__link
-    @extend .link--white
+    @extend .link--night
     font-size: 1rem
     font-weight: 500
