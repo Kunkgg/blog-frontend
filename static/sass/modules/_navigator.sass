@@ -10,13 +10,30 @@
   margin-bottom: 0
   font-size: 1rem
 
-.nav-link-list>li
+.li--nostyle
   @include clear-list-style
-  display: inline-block
-  padding: 0 1em
 
-.nav-link-list>li>a
-  @include header-link($grey-base, $grey-darken-4)
+.li--inline
+  @extend .li--nostyle
+  display: inline-block
+
+.link--grey
+  // make grey style link
+  @include make-color-link($grey-base, $grey-darken-4)
+
+.link--white
+  @include make-color-link($white-base, $white-base)
+
+
+.is-dis-none
+  display: none
+
+.is-night
+  background: $grey-darken-4
+  color: white
+
+
+
 
 // theme-icon
 .icon,
@@ -29,6 +46,25 @@
   width:  1.5em
   height: 1.5em
   padding: 0
-  margin: 0
+  margin: 0 .5em
   border: none
   background-color: transparent
+
+
+// mobile dropdown menu
+.mobile-dropdown
+  background: $grey-darken-4
+  width: 100%
+  position: absolute
+  top: 0
+  left: 0
+  transition: .5s
+
+  &__li
+    @extend .li--nostyle
+    padding: .5em .5em
+  
+  &__link
+    @extend .link--white
+    font-size: 1rem
+    font-weight: 500

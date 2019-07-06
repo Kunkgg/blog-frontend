@@ -5,15 +5,10 @@
   padding: 0
 
 @mixin clear-list-style
-  ul li
-    padding: 0
-    list-style: none
+  padding: 0
+  list-style: none
 
-ul.inline-block-list>li
-    @include clear-list-style
-    display: inline-block
-
-@mixin header-link($link-color, $link-hover-color)
+@mixin make-color-link($link-color, $link-hover-color)
   color: $link-color
   text-decoration: none
 

@@ -12,18 +12,31 @@
 
 <body>
   <!-- header -->
-  <header class="l-header">
+  <header class="l-header is-night">
+    <!-- nav for mobile device -->
+    <nav class="mobile-dropdown is-dis-none">
+      <ul class="nav-link-list">
+        <li class="mobile-dropdown__li"><a href="/" class="mobile-dropdown__link">Home</a></li>
+        <li class="mobile-dropdown__li"><a href="#" class="mobile-dropdown__link">Learn</a></li>
+        <li class="mobile-dropdown__li"><a href="#" class="mobile-dropdown__link">Articles</a></li>
+        <li class="mobile-dropdown__li"><a href="#" class="mobile-dropdown__link">Timeline</a></li>
+        <li class="mobile-dropdown__li"><a href="#" class="mobile-dropdown__link">TOC</a></li>
+      </ul>
+
+    </nav>
+
+
     <nav class="l-nav">
-      <div class="brand">
-        <a href="/">Kungo</a>
+      <div class="brand is-night">
+        <a href="/" class="link--grey">Kungo</a>
       </div>
 
       <ul class="nav-link-list">
-        <li style="display: none"><a href="#">Learn</a></li>
-        <li style="display: none"><a href="#">Articles</a></li>
-        <li style="display: none"><a href="#">Timeline</a></li>
-        <li>
-          <button class="nav-button">
+        <li class="li--inline"><a href="#" class="link--grey is-dis-none">Learn</a></li>
+        <li class="li--inline"><a href="#" class="link--grey is-dis-none">Articles</a></li>
+        <li class="li--inline"><a href="#" class="link--grey is-dis-none">Timeline</a></li>
+        <li class="li--inline">
+          <button class="nav-button" id="search">
             <svg t="1562319325697" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg"
               p-id="7138" width="200" height="200">
               <path
@@ -35,15 +48,15 @@
             </svg>
           </button>
         </li>
-        <li>
-          <button class="nav-button">
+        <li class="li--inline">
+          <button class="nav-button" id="day-night-toggle">
             <img
               src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTI4IiBoZWlnaHQ9IjEyOCIgc3R5bGU9ImVuYWJsZS1iYWNrZ3JvdW5kOm5ldyAwIDAgMTI4IDEyODsiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiPgogIDxwYXRoIGQ9Ik0xMDUuODcsMTQuOTljLTMuNzQtMy4zOS03LjkxLTYuMzgtMTIuNDItOC44OWMtMC44Ny0wLjQ5LTItMC4zNS0yLjcxLDAuMzMgYy0wLjcxLDAuNjgtMC44MywxLjczLTAuMjksMi41M2MxNS42MywyMi45MywxMi4yOSw1Mi41Mi04LjExLDcxLjk3Yy0xMS45LDExLjM1LTI3Ljg1LDE3LjYtNDQuOTEsMTcuNiBjLTExLjM5LDAtMjIuNTQtMi44Ni0zMi4yNC04LjI3Yy0wLjg3LTAuNDktMi0wLjM2LTIuNzEsMC4zM2MtMC43MSwwLjY4LTAuODMsMS43Mi0wLjI4LDIuNTNjMi44MSw0LjEyLDYuMTIsNy45Myw5Ljg2LDExLjMyIGMxMi42MSwxMS40NSwyOS4yNywxNy43Niw0Ni45LDE3Ljc2YzE4LjI3LDAsMzUuMzQtNi43LDQ4LjA5LTE4Ljg2YzEyLjUzLTExLjk0LDE5LjMxLTI3LjcxLDE5LjA5LTQ0LjQgQzEyNS45Miw0Mi4yNSwxMTguNzIsMjYuNjQsMTA1Ljg3LDE0Ljk5eiIgc3R5bGU9ImZpbGw6I0ZDQzIxQjsiLz4KPC9zdmc+"
               class="theme-icon" alt="Dark Mode">
           </button>
         </li>
-        <li>
-          <button class="nav-button">
+        <li class="li--inline">
+          <button class="nav-button" id="menu-toggler">
             <svg t="1562327314737" class="icon" viewBox="0 0 1225 1024" version="1.1" xmlns="http://www.w3.org/2000/svg"
               p-id="10449" width="128" height="128">
               <path
