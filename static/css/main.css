@@ -717,9 +717,29 @@ abbr[title] {
   display: none;
 }
 
-.is--night {
+.is-nav--night {
   background: #212121;
   color: rgba(255, 255, 255, 0.6);
+}
+
+.is-body--night {
+  background: #3b3b3b;
+  color: rgba(255, 255, 255, 0.6);
+}
+.is-body--night h1,
+.is-body--night h2,
+.is-body--night h3,
+.is-body--night h4,
+.is-body--night h5,
+.is-body--night h6,
+.is-body--night hr {
+  color: rgba(255, 255, 255, 0.6);
+}
+.is-body--night blockquote {
+  color: #9e9e9e;
+}
+.is-body--night table tr {
+  background: transparent;
 }
 
 .is-icon--night {

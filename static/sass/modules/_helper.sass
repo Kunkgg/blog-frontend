@@ -47,9 +47,31 @@
 .is--disnone
   display: none
 
-.is--night
+.is-nav--night
   background: $night-background
   color: $night-color
+
+.is-body--night
+  background: lighten($night-background, 10%)
+  color: $night-color
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  hr
+    color: $night-color
+  
+  blockquote
+    color: $grey-base
+  
+  table
+    tr
+      background: transparent
+
+
 
 .is-icon--night
   filter: brightness(10)
