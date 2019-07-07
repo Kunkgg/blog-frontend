@@ -876,7 +876,7 @@ main .post-toc__body .toc a:hover, main .post-toc__body .toc a:active, main .pos
   padding-bottom: 0.5em;
 }
 .mobile-dropdown__li {
-  padding: 0.5em 2rem;
+  padding: 0.5em 5%;
 }
 .mobile-dropdown__link {
   font-size: 1rem;
