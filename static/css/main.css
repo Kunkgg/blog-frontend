@@ -680,6 +680,52 @@ abbr[title] {
 @minxin clear-padding {
   padding: 0;
 }
+/* list helper
+ * ========================================================================== */
+.li--nostyle, .mobile-dropdown__li, .li--inline {
+  padding: 0;
+  list-style: none;
+}
+
+.li--inline {
+  display: inline-block;
+}
+
+/* link helper
+ * ========================================================================== */
+.link--grey {
+  color: #9e9e9e;
+  text-decoration: none;
+}
+.link--grey:hover, .link--grey:active, .link--grey:focus {
+  color: #212121;
+  text-decoration: none;
+}
+
+.link--night, .mobile-dropdown__link {
+  color: rgba(255, 255, 255, 0.6);
+  text-decoration: none;
+}
+.link--night:hover, .mobile-dropdown__link:hover, .link--night:active, .mobile-dropdown__link:active, .link--night:focus, .mobile-dropdown__link:focus {
+  color: #fff;
+  text-decoration: none;
+}
+
+/* State
+ * ========================================================================== */
+.is--disnone {
+  display: none;
+}
+
+.is--night {
+  background: #212121;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.is-icon--night {
+  filter: brightness(10);
+}
+
 /* Blog post
  * ========================================================================== */
 /**
@@ -783,55 +829,22 @@ main .post-toc__body .toc a:hover, main .post-toc__body .toc a:active, main .pos
   font-size: 1rem;
 }
 
-.li--nostyle, .mobile-dropdown__li, .li--inline {
-  padding: 0;
-  list-style: none;
-}
-
-.li--inline {
-  display: inline-block;
-}
-
-.link--grey {
-  color: #9e9e9e;
-  text-decoration: none;
-}
-.link--grey:hover, .link--grey:active, .link--grey:focus {
-  color: #212121;
-  text-decoration: none;
-}
-
-.link--night, .mobile-dropdown__link {
-  color: rgba(255, 255, 255, 0.6);
-  text-decoration: none;
-}
-.link--night:hover, .mobile-dropdown__link:hover, .link--night:active, .mobile-dropdown__link:active, .link--night:focus, .mobile-dropdown__link:focus {
-  color: #fff;
-  text-decoration: none;
-}
-
-.is--disnone {
-  display: none;
-}
-
-.is--night {
-  background: #212121;
-  color: rgba(255, 255, 255, 0.6);
-}
-
 .icon,
 .theme-icon {
   width: 1.5em;
   height: 1.5em;
 }
 
-.nav-button {
+.nav-button, .nav-button__img {
   width: 1.5em;
   height: 1.5em;
   padding: 0;
   margin: 0 0.5em;
   border: none;
   background-color: transparent;
+}
+.nav-button__img {
+  margin: 0 auto;
 }
 
 .mobile-dropdown {

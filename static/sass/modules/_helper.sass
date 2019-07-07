@@ -17,3 +17,39 @@
   &:focus
     color: $link-hover-color
     text-decoration: none
+
+
+/* list helper
+   ========================================================================== */
+
+.li--nostyle
+  @include clear-list-style
+
+.li--inline
+  @extend .li--nostyle
+  display: inline-block
+
+
+/* link helper
+   ========================================================================== */
+
+.link--grey
+  // make grey style link
+  @include make-color-link($grey-base, $grey-darken-4)
+
+.link--night
+  @include make-color-link($night-color, $white-base)
+
+
+/* State
+   ========================================================================== */
+
+.is--disnone
+  display: none
+
+.is--night
+  background: $night-background
+  color: $night-color
+
+.is-icon--night
+  filter: brightness(10)

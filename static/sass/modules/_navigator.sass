@@ -5,32 +5,10 @@
  * Index page navigator
  */
 
-
 .nav-link-list
   margin-bottom: 0
   font-size: 1rem
 
-.li--nostyle
-  @include clear-list-style
-
-.li--inline
-  @extend .li--nostyle
-  display: inline-block
-
-.link--grey
-  // make grey style link
-  @include make-color-link($grey-base, $grey-darken-4)
-
-.link--night
-  @include make-color-link($night-color, $white-base)
-
-
-.is--disnone
-  display: none
-
-.is--night
-  background: $night-background
-  color: $night-color
 
 // theme-icon
 .icon,
@@ -46,6 +24,10 @@
   margin: 0 .5em
   border: none
   background-color: transparent
+
+  &__img
+    @extend .nav-button
+    margin: 0 auto
 
 
 // mobile dropdown menu
