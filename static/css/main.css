@@ -810,11 +810,11 @@ main .post-toc__body .toc a:hover, main .post-toc__body .toc a:active, main .pos
   text-decoration: none;
 }
 
-.is-dis-none {
+.is--disnone {
   display: none;
 }
 
-.is-night {
+.is--night {
   background: #212121;
   color: rgba(255, 255, 255, 0.6);
 }

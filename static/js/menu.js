@@ -28,16 +28,15 @@ btnMenu.addEventListener('click', () => {
   }
 })
 
-
 function setNavAsNight() {
-  header.classList.add('is-night');
+  header.classList.add('is--night');
   lnLogo.classList.value = 'link--night';
   changeSvgColor(btnMenu, nightFontColor);
   changeSvgColor(btnSearch, nightFontColor);
 }
 
 function setNavAsDay() {
-  header.classList.remove('is-night');
+  header.classList.remove('is--night');
   lnLogo.classList.value = 'link--grey';
   changeSvgColor(btnMenu, dayFontColor);
   changeSvgColor(btnSearch, dayFontColor);
@@ -51,13 +50,13 @@ function changeSvgColor(element, color) {
 
 function openMenu() {
   main.style.marginTop = dropDown.querySelectorAll('li').length + 5 + 'rem';
-  dropDown.classList.remove('is-dis-none');
+  dropDown.classList.remove('is--disnone');
   menuActivated = true;
   main.addEventListener('click', closeMenu);
 }
 
 function closeMenu() {
-  dropDown.classList.add('is-dis-none');
+  dropDown.classList.add('is--disnone');
   main.style.marginTop = defaultMainMarginTop;
   menuActivated = false;
   try {
