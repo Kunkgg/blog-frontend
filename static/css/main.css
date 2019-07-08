@@ -681,12 +681,12 @@ abbr[title] {
 }
 /* list helper
  * ========================================================================== */
-.li--nostyle, .mobile-dropdown__li, .li--inline {
+.li--nostyle, .mobile-dropdown__li, .li--inline, .post-state li {
   padding: 0;
   list-style: none;
 }
 
-.li--inline {
+.li--inline, .post-state li {
   display: inline-block;
 }
 
@@ -747,6 +747,24 @@ abbr[title] {
 
 /* Blog post
  * ========================================================================== */
+.post-state {
+  padding: 0;
+  color: #9e9e9e;
+}
+.post-state li {
+  align-content: center;
+}
+.post-state__icon > img, .post-state__read-time > img {
+  width: 1em;
+  height: 1em;
+  margin: 0 1em;
+  display: inline;
+}
+
+.fa-clock:before {
+  content: "";
+}
+
 /**
  * * footnotes
  * */
