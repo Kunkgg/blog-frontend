@@ -17,7 +17,7 @@
 
   li
     @extend .li--inline
-    padding-right: .5em
+    padding: .5em
 
     i
       margin-right: .3em
@@ -29,8 +29,8 @@
       @extend .link--like
     
 
-.post-on-detail__header__tags
-  margin-bottom: 2em
+.post-on-detail__header
+  margin-bottom: 3em
 
 .tag
   font-size: .8em
@@ -72,7 +72,7 @@
  * TOC
  */
 
-main .post-toc
+.post-toc
   border: $borders
   border-radius: $border-radius
 
@@ -124,15 +124,17 @@ main .post-toc
       .toc-H6
         padding-left: 2rem
 
-      a
-        color: $grey-base
-        font-weight: normal
-        border-bottom: initial
+.toc__link
+  border-bottom: none
+  color: $grey-base
+  font-weight: normal
 
-        &:hover,
-        &:active,
-        &:focus
-          border-bottom: initial
-          background-color: initial
-          color: $link-hover-color
-          text-decoration: underline
+  &:hover
+    background: $link-bg-color
+    border-bottom: 2px solid $link-hover-color
+    text-decoration: none
+
+  &:active,
+  &:focus
+    border-bottom: 2px dashed $link-hover-color
+    text-decoration: none

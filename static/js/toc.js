@@ -5,6 +5,9 @@ var contentMark = '.post-on-detail__body';
 var deep = 4;
 // if scroll to header with smooth effect, true/false
 var smoothScroll = true;
+// if navigator fixed on the top, navOffSet should equal to the height of navigator
+const navOffSet = 16*4 + 10; // 4rem + gap = 4 * 16 + 10 px
+
 var headersFilter = '';
 for (let i = 1; i <= deep; i++) {
     headersFilter += contentMark + ' h' + i + ',';
@@ -23,18 +26,18 @@ function tocItem(header) {
     var a = document.createElement('a');
     a.textContent = header.textContent;
     a.setAttribute('href', '#' + header.textContent);
+    a.classList.add('toc__link');
     a.onclick = function (e) {
         e.preventDefault();
         if (smoothScroll) {
             window.scrollTo({
-                top: header.offsetTop,
+                top: header.offsetTop - navOffSet,
                 left: 0,
                 behavior: 'smooth'
             });
         } else {
-            window.scrollTo(0, header.offsetTop);
+            window.scrollTo(0, header.offsetTop - navOffSet);
         }
-
     };
     li.appendChild(a);
     TableOfContent.appendChild(li);
