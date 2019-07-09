@@ -1,12 +1,7 @@
 /* Blog post
    ========================================================================== */
 
-// post-on-index
-
-// post-on-detail
-
-// .post-on-detil
-
+// post-state inculding the date of update, reading time, counters of comments and like
 .post-state
   font-size: .8rem
   padding: 0
@@ -14,6 +9,7 @@
 
   ul
     padding-left: 0 
+    margin-bottom: 0
 
   li
     @extend .li--inline
@@ -27,11 +23,32 @@
 
   &__like>a
       @extend .link--like
-    
+
+
+// margin between sections on index-page
+
+.about
+  margin-bottom: 4rem
+
+
+// post-on-index
+
+.post-on-index
+  margin-bottom: 2.5em
+
+  .post-on-index__name,
+  .post-on-index__digest
+    margin-bottom: .5em
+
+  .post-state
+    margin-bottom: 0
+
+// post-on-detail
 
 .post-on-detail__header
   margin-bottom: 3em
 
+// tag
 .tag
   font-size: .8em
   font-weight: 300

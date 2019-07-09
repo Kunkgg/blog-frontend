@@ -13,17 +13,47 @@
 <body>
   <!-- header -->
   <header class="l-header">
+    <!-- <header class="l-header is-night"> -->
+    <!-- nav for mobile device -->
+    <nav class="mobile-dropdown is--disnone">
+      <ul class="nav-link-list">
+        <li class="mobile-dropdown__li"><a href="/" class="mobile-dropdown__link">Home</a></li>
+        <li class="mobile-dropdown__li"><a href="#" class="mobile-dropdown__link">Learn</a></li>
+        <li class="mobile-dropdown__li"><a href="#" class="mobile-dropdown__link">Articles</a></li>
+        <li class="mobile-dropdown__li"><a href="#" class="mobile-dropdown__link">Timeline</a></li>
+        <li class="mobile-dropdown__li"><a href="#" class="mobile-dropdown__link">TOC</a></li>
+      </ul>
+
+    </nav>
+
+
     <nav class="l-nav">
       <div class="brand">
-        <a href="/">Kungo</a>
+        <a href="/" id="logo" class="link--grey">Kungo</a>
+        <!-- <a href="/" class="link--night">Kungo</a> -->
       </div>
 
       <ul class="nav-link-list">
-        <li><a href="#">Articles</a></li>
-        <li><a href="#">Learn</a></li>
-        <li><a href="#">Timeline</a></li>
-        <li>search</li>
-        <li>DN-toggle</li>
+        <li class="li--inline"><a href="#" class="link--grey is--disnone">Learn</a></li>
+        <li class="li--inline"><a href="#" class="link--grey is--disnone">Articles</a></li>
+        <li class="li--inline"><a href="#" class="link--grey is--disnone">Timeline</a></li>
+        <li class="li--inline">
+          <button class="nav-button" id="search">
+            <img src="static/img/search.svg" class="nav-button__img" alt="search">
+          </button>
+        </li>
+        <li class="li--inline">
+          <button class="nav-button" id="day-night-toggle">
+            <img
+              src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTI4IiBoZWlnaHQ9IjEyOCIgc3R5bGU9ImVuYWJsZS1iYWNrZ3JvdW5kOm5ldyAwIDAgMTI4IDEyODsiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiPgogIDxwYXRoIGQ9Ik0xMDUuODcsMTQuOTljLTMuNzQtMy4zOS03LjkxLTYuMzgtMTIuNDItOC44OWMtMC44Ny0wLjQ5LTItMC4zNS0yLjcxLDAuMzMgYy0wLjcxLDAuNjgtMC44MywxLjczLTAuMjksMi41M2MxNS42MywyMi45MywxMi4yOSw1Mi41Mi04LjExLDcxLjk3Yy0xMS45LDExLjM1LTI3Ljg1LDE3LjYtNDQuOTEsMTcuNiBjLTExLjM5LDAtMjIuNTQtMi44Ni0zMi4yNC04LjI3Yy0wLjg3LTAuNDktMi0wLjM2LTIuNzEsMC4zM2MtMC43MSwwLjY4LTAuODMsMS43Mi0wLjI4LDIuNTNjMi44MSw0LjEyLDYuMTIsNy45Myw5Ljg2LDExLjMyIGMxMi42MSwxMS40NSwyOS4yNywxNy43Niw0Ni45LDE3Ljc2YzE4LjI3LDAsMzUuMzQtNi43LDQ4LjA5LTE4Ljg2YzEyLjUzLTExLjk0LDE5LjMxLTI3LjcxLDE5LjA5LTQ0LjQgQzEyNS45Miw0Mi4yNSwxMTguNzIsMjYuNjQsMTA1Ljg3LDE0Ljk5eiIgc3R5bGU9ImZpbGw6I0ZDQzIxQjsiLz4KPC9zdmc+"
+              class="theme-icon" alt="day-night-toggle">
+          </button>
+        </li>
+        <li class="li--inline">
+          <button class="nav-button" id="menu-toggle">
+            <img src="static/img/menu.svg" class="nav-button__img" alt="menu">
+          </button>
+        </li>
       </ul>
     </nav>
   </header>
@@ -31,25 +61,24 @@
 
   <!-- main -->
   <main class="l-main">
-    <div class="about">
+    <section class="about">
       <h2>About</h2>
       <p>I used to be a Milliampere man with five years of experience. But I don't like that job. I want to try
         another type of work. My goal is becoming a full-stack developer. I start this blog for recording resources in
         my learning process. I hope here is a beautiful corner of the web. No ads, No sponsored posts, No newsletter
         pop-ups, No affiliate links and any annoying noise.</p>
-    </div>
+    </section>
 
-    <section>
+    <section class="posts">
       <h2>Last Articles</h2>
       <div class="post-on-index">
         <h3 class="post-on-index__name">Getting Started with Vue - An Overview and Walk through Tutorial</h3>
         <div class="post-state">
           <ul>
-            <li>type-icon</li>
-            <li>May 10, 2015</li>
-            <li>2 min read</li>
-            <li>comment-n</li>
-            <li>like-n</li>
+            <li class="post_state__update"><i class="far fa-calendar-alt"></i>May 10, 2015</li>
+            <li class="post-state__read-time"><i class="fas fa-book-reader"></i>20 min read</li>
+            <li class="post-state__comment"><a href="#" class="button"><i class="far fa-comment-dots"></i></a>25</li>
+            <li class="post-state__like"><a href="#" class="button"><i class="far fa-heart"></i></a>369</li>
           </ul>
         </div>
         <div class="post-on-index__digest">
@@ -58,57 +87,60 @@
           iusto odio dignissimos et dolorum fuga.
         </div>
         <a href="#">Read More</a>
+      </div>
 
-        <div class="post-on-index">
-          <h3 class="post-on-index__name">记忆也要讲究方法</h3>
-          <div class="post-on-index__state">
-            <ul>
-              <li>type-icon</li>
-              <li>date</li>
-              <li>comment-n</li>
-              <li>like-n</li>
-            </ul>
-          </div>
-          <div class="post-on-index__digest">
-            《你不是记性差，只是没找对方法》(By 池田义博) 读书笔记
-            脑科学研究发现，在人的大脑中，控制记忆的部分被称为“海马体”，记忆的持久性主要由其决定。海马体犹如以为裁决信息是否具有价值的法官，或是提示“这则重要信息需要保存下来”，或是“这条信息完全没有留下的必要”
-          </div>
-          <a href="#">阅读全文</a>
+      <div class="post-on-index">
+        <h3 class="post-on-index__name">记忆也要讲究方法</h3>
+        <div class="post-state">
+          <ul>
+            <li class="post_state__update"><i class="far fa-calendar-alt"></i>May 10, 2015</li>
+            <li class="post-state__read-time"><i class="fas fa-book-reader"></i>20 min read</li>
+            <li class="post-state__comment"><a href="#" class="button"><i class="far fa-comment-dots"></i></a>25</li>
+            <li class="post-state__like"><a href="#" class="button"><i class="far fa-heart"></i></a>369</li>
+          </ul>
         </div>
+        <div class="post-on-index__digest">
+          《你不是记性差，只是没找对方法》(By 池田义博) 读书笔记
+          脑科学研究发现，在人的大脑中，控制记忆的部分被称为“海马体”，记忆的持久性主要由其决定。海马体犹如以为裁决信息是否具有价值的法官，或是提示“这则重要信息需要保存下来”，或是“这条信息完全没有留下的必要”
+        </div>
+        <a href="#">阅读全文</a>
+      </div>
+      </div>
 
-        <div class="post-on-index">
-          <h3 class="post-on-index__name">Getting Started with Vue - An Overview and Walk through Tutorial</h3>
-          <div class="post-on-index__state">
-            <ul>
-              <li>type-icon</li>
-              <li>date</li>
-              <li>comment-n</li>
-              <li>like-n</li>
-            </ul>
-          </div>
-          <div class="post-on-index__digest">
-            At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti
-            atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident et accusamus
-            iusto odio dignissimos et dolorum fuga.
-          </div>
-          <a href="#">Read More</a>
+      <div class="post-on-index">
+        <h3 class="post-on-index__name">Getting Started with Vue - An Overview and Walk through Tutorial</h3>
+        <div class="post-state">
+          <ul>
+            <li class="post_state__update"><i class="far fa-calendar-alt"></i>May 10, 2015</li>
+            <li class="post-state__read-time"><i class="fas fa-book-reader"></i>20 min read</li>
+            <li class="post-state__comment"><a href="#" class="button"><i class="far fa-comment-dots"></i></a>25</li>
+            <li class="post-state__like"><a href="#" class="button"><i class="far fa-heart"></i></a>369</li>
+          </ul>
+        </div>
+        <div class="post-on-index__digest">
+          At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti
+          atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident et accusamus
+          iusto odio dignissimos et dolorum fuga.
+        </div>
+        <a href="#">Read More</a>
+      </div>
 
-          <div class="post-on-index">
-            <h3 class="post-on-index__name">记忆也要讲究方法</h3>
-            <div class="post-on-index__state">
-              <ul>
-                <li>type-icon</li>
-                <li>date</li>
-                <li>comment-n</li>
-                <li>like-n</li>
-              </ul>
-            </div>
-            <div class="post-on-index__digest">
-              《你不是记性差，只是没找对方法》(By 池田义博) 读书笔记
-              脑科学研究发现，在人的大脑中，控制记忆的部分被称为“海马体”，记忆的持久性主要由其决定。海马体犹如以为裁决信息是否具有价值的法官，或是提示“这则重要信息需要保存下来”，或是“这条信息完全没有留下的必要”
-            </div>
-            <a href="#">阅读全文</a>
-          </div>
+      <div class="post-on-index">
+        <h3 class="post-on-index__name">记忆也要讲究方法</h3>
+        <div class="post-state">
+          <ul>
+            <li class="post_state__update"><i class="far fa-calendar-alt"></i>May 10, 2015</li>
+            <li class="post-state__read-time"><i class="fas fa-book-reader"></i>20 min read</li>
+            <li class="post-state__comment"><a href="#" class="button"><i class="far fa-comment-dots"></i></a>25</li>
+            <li class="post-state__like"><a href="#" class="button"><i class="far fa-heart"></i></a>369</li>
+          </ul>
+        </div>
+        <div class="post-on-index__digest">
+          《你不是记性差，只是没找对方法》(By 池田义博) 读书笔记
+          脑科学研究发现，在人的大脑中，控制记忆的部分被称为“海马体”，记忆的持久性主要由其决定。海马体犹如以为裁决信息是否具有价值的法官，或是提示“这则重要信息需要保存下来”，或是“这条信息完全没有留下的必要”
+        </div>
+        <a href="#">阅读全文</a>
+      </div>
     </section>
   </main>
 
@@ -117,6 +149,13 @@
   <footer>
     © 2019 Copyright: kungo.com
   </footer>
+
+
+  <!-- navigator -->
+  <script src="static/js/nav.js"></script>
+
+  <!-- fontawesome -->
+  <script src="static/js/fontawesome.js"></script>
 </body>
 
 </html>
