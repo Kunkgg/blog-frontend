@@ -1,22 +1,3 @@
-/* Media query
-   ========================================================================== */
-
-// Media query for mobile first layout 
-@mixin small-breakpoint
-  @media (min-width: #{$mobile})
-    @content
-
-// Break on tablet
-@mixin medium-breakpoint
-  @media (min-width: #{$tablet})
-    @content
-
-// Break on desktop
-@mixin large-breakpoint
-  @media (min-width: #{$desktop})
-    @content
-
-
 /* font-size px to rem
    ========================================================================== */
 
@@ -25,6 +6,26 @@
 
 @mixin font-size-rem($size)
   font-size: cal-rem($size)
+
+
+/* Media query
+   ========================================================================== */
+
+@mixin xs-breakpoint
+  @media (min-width: cal-rem($x-small))
+    @content
+
+@mixin sm-breakpoint
+  @media (min-width: cal-rem($small))
+    @content
+
+@mixin md-breakpoint
+  @media (min-width: cal-rem($medium))
+    @content
+
+@mixin lg-breakpoint
+  @media (min-width: cal-rem($large))
+    @content
 
 
 /* text decorator

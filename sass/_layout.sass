@@ -1,20 +1,50 @@
 /* Index-page layout
    ========================================================================== */
 
-.l-header
+.xs-header
   width: 100%
   position: fixed
   top: 0
 
-.l-nav
+.xs-nav
   margin: 0 auto
   height: 4rem
   width: 90%
   display: flex
   align-items: center
   justify-content: space-between
+  // max-width: cal-rem(440px)
 
-.l-main
+.xs-main
   margin: 0 auto
   padding-top: 7rem
   width: 90%
+  max-width: cal-rem(440px)
+
+
+
+
+/* media query
+   ========================================================================== */
+
+@include xs-breakpoint
+  html
+    font-size: $sm-font-size
+  
+  .sm-main,
+  .sm-nav
+    width: 90%
+    max-width: cal-rem(650px)
+
+@include sm-breakpoint
+  html
+    font-size: $md-font-size
+
+  .md-main,
+  .md-nav
+    max-width: cal-rem(850px)
+    width: 90%
+
+// @include md-breakpoint
+//   html
+//     font-size: $lg-font-size
