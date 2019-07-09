@@ -8,16 +8,6 @@
   padding: 0
   list-style: none
 
-@mixin make-color-link($link-color, $link-hover-color)
-  color: $link-color
-  text-decoration: none
-
-  &:hover,
-  &:active,
-  &:focus
-    color: $link-hover-color
-    text-decoration: none
-
 
 /* list helper
    ========================================================================== */
@@ -33,12 +23,28 @@
 /* link helper
    ========================================================================== */
 
+@mixin make-color-link($link-color, $link-hover-color)
+  color: $link-color
+  text-decoration: none
+
+  &:hover,
+  &:active,
+  &:focus
+    color: $link-hover-color
+    text-decoration: none
+
 .link--grey
   // make grey style link
   @include make-color-link($grey-base, $grey-darken-4)
 
 .link--night
   @include make-color-link($night-color, $white-base)
+
+.link--comment
+  @include make-color-link($grey-base, $primary-color)
+
+.link--like
+  @include make-color-link($grey-base, $accent-color)
 
 
 /* State
@@ -67,8 +73,7 @@
   blockquote
     color: $grey-base
   
-  table
-    tr
+  table>tr
       background: transparent
 
 

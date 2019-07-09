@@ -22,6 +22,34 @@
     i
       margin-right: .3em
 
+  &__comment>a
+      @extend .link--comment
+
+  &__like>a
+      @extend .link--like
+    
+
+.post-on-detail__header__tags
+  margin-bottom: 2em
+
+.tag
+  font-size: .8em
+  font-weight: 300
+  padding: .5em
+  border: 1px solid $link-bg-color
+  border-radius: $border-radius
+
+  &:hover
+    background: $link-bg-color
+    border-bottom: 2px solid $link-hover-color
+    text-decoration: none
+
+  &:active,
+  &:focus
+    border-bottom: 2px dashed $link-hover-color
+    text-decoration: none
+
+
 
 
 /**
