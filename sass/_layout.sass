@@ -1,7 +1,7 @@
 /* Index-page layout
    ========================================================================== */
 
-.xs-header
+.l-header
   width: 100%
   position: fixed
   top: 0
@@ -60,16 +60,11 @@
   
   .md-nav--dis
     display: inline-block !important
-  
-  // .md-toc--dis
-  //   display: block !important
-  //   position: fixed
-  //   top: 18%
-  //   right: 10%
 
 @include md-breakpoint
   .lg--none
     display: none !important
+
   .lg-toc--dis
     display: block !important
     position: fixed
@@ -85,3 +80,17 @@
     position: fixed
     top: 18%
     right: 3%
+
+
+/* combine layout style names
+   ========================================================================== */
+
+.l-nav
+  @extend .xs-nav
+  @extend .sm-nav
+  @extend .md-nav
+
+.l-main
+  @extend .xs-main
+  @extend .sm-main
+  @extend .md-main
