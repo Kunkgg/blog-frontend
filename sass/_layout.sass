@@ -60,8 +60,27 @@
   .md-nav--dis
     display: inline-block !important
   
-  .md-toc--dis
+  // .md-toc--dis
+  //   display: block !important
+  //   position: fixed
+  //   top: 18%
+  //   right: 10%
+
+@include md-breakpoint
+  .lg--none
+    display: none !important
+  .lg-toc--dis
     display: block !important
     position: fixed
-    top: 9rem
-    right: 4rem
+    top: 18%
+    right: 5%
+  
+@include lg-breakpoint
+  .xlg--none
+    display: none !important
+  
+  .xlg-toc--dis
+    display: block !important
+    position: fixed
+    top: 18%
+    right: 5%

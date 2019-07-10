@@ -6,7 +6,19 @@ var deep = 4;
 // if scroll to header with smooth effect, true/false
 var smoothScroll = true;
 // if navigator fixed on the top, navOffSet should equal to the height of navigator
-const navOffSet = 16*4 + 10; // 4rem + gap = 4 * 16 + 10 px
+const navOffset = 5 // 5rem
+var navOffsetValue = navOffset * getRootFontSize();
+// toc container for control the toc auto scrolling
+const tocContainer = document.querySelector('.post-toc');
+
+// get current root font-size
+function getRootFontSize(){
+    let html = document.querySelector('html');
+    let style = window.getComputedStyle(html, null).getPropertyValue('font-size');
+    return parseFloat(style);
+}
+
+
 
 var headersFilter = '';
 for (let i = 1; i <= deep; i++) {
@@ -31,12 +43,12 @@ function tocItem(header) {
         e.preventDefault();
         if (smoothScroll) {
             window.scrollTo({
-                top: header.offsetTop - navOffSet,
+                top: header.offsetTop - navOffsetValue,
                 left: 0,
                 behavior: 'smooth'
             });
         } else {
-            window.scrollTo(0, header.offsetTop - navOffSet);
+            window.scrollTo(0, header.offsetTop - navOffsetValue);
         }
     };
     li.appendChild(a);
@@ -54,7 +66,8 @@ for (let index = 0; index < headers.length; index++) {
 function findLooking() {
     for (let index = 0; index < headerOffsetTops.length; index++) {
         const headerOffsetTop = headerOffsetTops[index];
-        if (window.pageYOffset < headerOffsetTop) {
+        // according to the height of navigator 
+        if (window.pageYOffset + navOffsetValue + getRootFontSize() < headerOffsetTop) {
             if (index == 0) {
                 return index;
             } else {
@@ -75,6 +88,15 @@ function autoTocScroll() {
         tocLi.classList.remove('is-looking');
     }
     tocLis[index].classList.add('is-looking');
+    if (smoothScroll) {
+        tocContainer.scrollTo({
+            top: tocLis[index].offsetTop,
+            left: 0,
+            behavior: 'smooth'
+        });
+    } else {
+        tocContainer.scrollTo(0, tocLis[index].offsetTop);
+    }
 }
 
 window.onscroll = function () {
