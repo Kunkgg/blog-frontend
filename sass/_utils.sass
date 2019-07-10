@@ -1,30 +1,27 @@
 /* font-size px to rem
    ========================================================================== */
 
-@function cal-rem($size-px)
-  @return $size-px / 16px * 1rem
-
-@mixin font-size-rem($size)
-  font-size: cal-rem($size)
+@function cal-rem($size-px, $root-rem)
+  @return $size-px / (16px * ($root-rem / 1rem)) * 1rem
 
 
 /* Media query
    ========================================================================== */
 
 @mixin xs-breakpoint
-  @media (min-width: cal-rem($x-small))
+  @media (min-width: cal-rem($x-small, $font-size))
     @content
 
 @mixin sm-breakpoint
-  @media (min-width: cal-rem($small))
+  @media (min-width: cal-rem($small, $font-size))
     @content
 
 @mixin md-breakpoint
-  @media (min-width: cal-rem($medium))
+  @media (min-width: cal-rem($medium, $font-size))
     @content
 
 @mixin lg-breakpoint
-  @media (min-width: cal-rem($large))
+  @media (min-width: cal-rem($large, $font-size))
     @content
 
 

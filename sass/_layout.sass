@@ -13,16 +13,19 @@
   display: flex
   align-items: center
   justify-content: space-between
-  // max-width: cal-rem(440px)
+  max-width: cal-rem(440px, $xs-font-size)
 
 .xs-main
   margin: 0 auto
   padding-top: 7rem
   width: 90%
-  max-width: cal-rem(440px)
+  max-width: cal-rem(440px, $xs-font-size)
 
+.xs--none
+  display: none !important
 
-
+.xs-nav--dis
+    display: inline-block !important
 
 /* media query
    ========================================================================== */
@@ -34,7 +37,13 @@
   .sm-main,
   .sm-nav
     width: 90%
-    max-width: cal-rem(650px)
+    max-width: cal-rem(650px, $sm-font-size)
+  
+  .sm--none
+    display: none !important
+  
+  .sm-nav--dis
+    display: inline-block !important
 
 @include sm-breakpoint
   html
@@ -42,9 +51,17 @@
 
   .md-main,
   .md-nav
-    max-width: cal-rem(850px)
+    max-width: cal-rem(850px, $md-font-size)
     width: 90%
 
-// @include md-breakpoint
-//   html
-//     font-size: $lg-font-size
+  .md--none
+    display: none !important
+  
+  .md-nav--dis
+    display: inline-block !important
+  
+  .md-toc--dis
+    display: block !important
+    position: fixed
+    top: 9rem
+    right: 4rem

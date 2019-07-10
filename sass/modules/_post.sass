@@ -90,17 +90,26 @@
  */
 
 .post-toc
+  @extend .xs--none
+  @extend .sm--none
+  @extend .md-toc--dis
+
   border: $borders
   border-radius: $border-radius
+  max-width: 20%
+  max-height: 60vh
+  overflow: auto
 
   &__header
     font-size: 1rem
     padding: 0
     height: 2em
     text-align: center
-    background: $grey-darken-1
-    color: $grey-lighten-5
-    margin-bottom: 1.5em
+    // background: $grey-base
+    // color: $grey-lighten-5
+    background: $grey-lighten-5
+    color: $grey-base
+    margin-bottom: 1em
     display: flex
     align-items: center
     justify-content: center
@@ -108,7 +117,7 @@
   &__body
     .toc
       li
-        font-size: .8rem
+        font-size: .75rem
         line-height: 1.25
         margin-bottom: 0.5em 
         list-style: none
