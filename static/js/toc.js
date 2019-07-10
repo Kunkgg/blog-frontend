@@ -1,3 +1,4 @@
+// todo: bug: toc auto position wrong while crossing image
 // TOC Start
 // set scope
 var contentMark = '.post-on-detail__body';
