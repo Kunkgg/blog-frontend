@@ -14,13 +14,13 @@
   display: flex
   align-items: center
   justify-content: space-between
-  max-width: cal-rem(440px, $xs-font-size)
+  max-width: cal-rem($xs-max-width, $xs-font-size)
 
 .xs-main
   margin: 0 auto
   padding-top: 7rem
   width: 90%
-  max-width: cal-rem(440px, $xs-font-size)
+  max-width: cal-rem($xs-max-width, $xs-font-size)
 
 .xs--none
   display: none !important
@@ -38,7 +38,7 @@
   .sm-main,
   .sm-nav
     width: 90%
-    max-width: cal-rem(650px, $sm-font-size)
+    max-width: cal-rem($sm-max-width, $sm-font-size)
   
   .sm--none
     display: none !important
@@ -52,7 +52,7 @@
 
   .md-main,
   .md-nav
-    max-width: cal-rem(850px, $md-font-size)
+    max-width: cal-rem($md-max-width, $md-font-size)
     width: 90%
 
   .md--none
